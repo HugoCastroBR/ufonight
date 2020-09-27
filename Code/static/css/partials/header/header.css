@@ -6,20 +6,34 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: Row;
           flex-direction: Row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 .UfoNight__Header {
-  height: 50px;
   width: 1200px;
-  background-color: Black;
   padding-left: calc(50vw - 600px);
   padding-right: calc(50vw - 600px);
+}
+
+.UfoNight__Header {
+  border-bottom: 0.5px solid gray;
+}
+
+@media screen and (max-width: 1200px) {
+  .UfoNight__Header {
+    width: 100vw;
+  }
+}
+
+.noDisplay {
+  display: none;
+}
+
+.UfoNight__Header {
+  height: 50px;
+  background-color: Black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,7 +46,13 @@
 
 .UfoNight__Header__ContainerItem {
   width: 33%;
-  height: 50px;
+  height: 100%;
+}
+
+.UfoNight__Header__UserMenuToggle__Container {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .UfoNight__Header__Logo__Img {
@@ -56,6 +76,9 @@
   background-color: white;
   -webkit-transition: 1s;
   transition: 1s;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .UfoNight__Header__SearchForm__Btn:hover {
@@ -88,5 +111,66 @@
 .UfoNight__Header__UserMenuToggle__UserPicImg {
   max-width: 25px;
   max-height: 25px;
+}
+
+.UfoNight__Header__Logo__ImgSmall {
+  display: none;
+  max-width: 100%;
+  max-height: 40px;
+}
+
+@media screen and (max-width: 1200px) {
+  .UfoNight__Header__UserMenuToggle__Container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .UfoNight__Header__Logo__Container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .UfoNight__Header__ContainerItem {
+    width: 100%;
+  }
+  .UfoNight__Header__SearchForm__Container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
+  }
+  .UfoNight__Header__SearchForm__Input {
+    width: 85%;
+  }
+  .UfoNight__Header__Logo__Img {
+    display: none;
+  }
+  .UfoNight__Header__Logo__ImgSmall {
+    display: block;
+  }
+  .UfoNight__Header__UserMenuToggle__Container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-negative: 2;
+        flex-shrink: 2;
+  }
+  .UfoNight__Header__Logo__Container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-negative: 2;
+        flex-shrink: 2;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .UfoNight__Header__UserMenuToggle__UserName {
+    display: none;
+  }
 }
 /*# sourceMappingURL=header.css.map */

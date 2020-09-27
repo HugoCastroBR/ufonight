@@ -1,0 +1,33 @@
+@import "../../style/base.scss";
+
+.UfoNight__Footer{
+    @extend %StartBlockBorder;
+    @extend %flexRow;
+    @extend %WidthPadding;
+    background-color: black;
+    align-items: center;
+    justify-content: space-between;
+    height: 160px;
+}
+.UfoNight__Footer__Container{
+    @extend %flexRow;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+}
+.UfoNight__Footer__ItemInfo{
+    width: 33%;
+    height: 100%;
+    @extend %flexColumn;
+    justify-content: center;
+    align-items: center;
+}
+.UfoNight__Footer__ItemInfo__a{
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+}
+.UfoNight__Footer__ItemInfo__img{
+    width: 100%;
+    max-height: 100%;
+}

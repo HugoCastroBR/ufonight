@@ -1,4 +1,76 @@
+.UfoNight__Nav, .UfoNight__Nav__Highlights__Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: Row;
+          flex-direction: Row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.UfoNight__Nav {
+  width: 1200px;
+  padding-left: calc(50vw - 600px);
+  padding-right: calc(50vw - 600px);
+}
+
+.UfoNight__Nav {
+  border-bottom: 0.5px solid gray;
+}
+
+@media screen and (max-width: 1200px) {
+  .UfoNight__Nav {
+    width: 100vw;
+  }
+}
+
+.noDisplay {
+  display: none;
+}
+
 .UfoNight__Nav {
   height: 30px;
+  background-color: black;
+}
+
+.UfoNight__Nav__Highlights__Container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.UfoNight__Nav__Highlights__Item__a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .UfoNight__Nav__Highlights__Container {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .UfoNight__Nav__Highlights__Item__a {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .UfoNight__Nav__Highlights__Item__a {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .UfoNight__Nav__Highlights__Item__a {
+    margin-left: 1px;
+    margin-right: 1px;
+    font-size: 10px;
+  }
 }
 /*# sourceMappingURL=nav.css.map */

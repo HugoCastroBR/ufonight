@@ -1,3 +1,44 @@
+@import '../../style/base';
+
 .UfoNight__Nav{
     height: 30px;
+    @extend %WidthPadding;
+    @extend %flexRow;
+    background-color: black;
+    @extend %EndBlockBorder;
+}
+.UfoNight__Nav__Highlights__Container{
+    @extend %flexRow;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+.UfoNight__Nav__Highlights__Item__a{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1200px){
+    .UfoNight__Nav__Highlights__Container{
+        justify-content: space-around;
+    }
+    .UfoNight__Nav__Highlights__Item__a{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .UfoNight__Nav__Highlights__Item__a{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .UfoNight__Nav__Highlights__Item__a{
+        margin-left: 1px;
+        margin-right: 1px;
+        font-size: 10px;
+    }
 }

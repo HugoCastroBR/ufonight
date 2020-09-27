@@ -1,29 +1,13 @@
-$mainColor: Black;
-$secondColor: White;
-
-
-%flexCollum{
-    display: flex;
-    flex-direction: column;
-};
-
-%flexRow{
-    display: flex;
-    flex-direction: Row;
-    justify-content: center;
-    align-items: center;
-};
-
+@import '../../style/base.scss';
 
 .UfoNight__Header{
 
     height: 50px;
-    width: 1200px;
     background-color: $mainColor;
-    padding-left: calc(50vw - 600px);
-    padding-right: calc(50vw - 600px);
+    @extend %WidthPadding;
     display: flex;
     @extend %flexRow;
+    @extend %EndBlockBorder
 }
 
 .UfoNight__Header__Container{
@@ -34,10 +18,13 @@ $secondColor: White;
 }
 .UfoNight__Header__ContainerItem{
     width: 33%;
-    height: 50px;
+    height: 100%;
     @extend %flexRow;
 }
 
+.UfoNight__Header__UserMenuToggle__Container{
+    justify-content: flex-end;
+}
 .UfoNight__Header__Logo__Img{
     max-width: 100%;
     max-height: 40px;
@@ -59,6 +46,7 @@ $secondColor: White;
     background-color: white;
     @extend %flexRow;
     transition: 1s;
+    justify-content: center;
 }
 .UfoNight__Header__SearchForm__Btn:hover{
     transition: 1s;
@@ -87,4 +75,51 @@ $secondColor: White;
 .UfoNight__Header__UserMenuToggle__UserPicImg{
     max-width: 25px;
     max-height: 25px;
+}
+
+.UfoNight__Header__Logo__ImgSmall{
+    display: none;
+    max-width: 100%;
+    max-height: 40px;
+}
+
+@media screen and (max-width: 1200px){
+    .UfoNight__Header__UserMenuToggle__Container{
+        justify-content: center;
+    }
+    .UfoNight__Header__Logo__Container{
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 800px){
+    .UfoNight__Header__ContainerItem{
+        width: 100%;
+    }
+    .UfoNight__Header__SearchForm__Container{
+        justify-content: center;
+        flex-shrink: 1;
+    }
+    .UfoNight__Header__SearchForm__Input{
+        width: 85%;
+    }
+    .UfoNight__Header__Logo__Img{
+        display: none;
+    }
+    .UfoNight__Header__Logo__ImgSmall{
+        display: block;
+    }
+
+    .UfoNight__Header__UserMenuToggle__Container{
+        justify-content: center;
+        flex-shrink: 2;
+    }
+    .UfoNight__Header__Logo__Container{
+        justify-content: center;
+        flex-shrink: 2;
+    }
+}
+@media screen and (max-width: 380px){
+    .UfoNight__Header__UserMenuToggle__UserName{
+        display: none;
+    }
 }
