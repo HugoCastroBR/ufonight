@@ -1,0 +1,90 @@
+$mainColor: Black;
+$secondColor: White;
+
+
+%flexCollum{
+    display: flex;
+    flex-direction: column;
+};
+
+%flexRow{
+    display: flex;
+    flex-direction: Row;
+    justify-content: center;
+    align-items: center;
+};
+
+
+.UfoNight__Header{
+
+    height: 50px;
+    width: 1200px;
+    background-color: $mainColor;
+    padding-left: calc(50vw - 600px);
+    padding-right: calc(50vw - 600px);
+    display: flex;
+    @extend %flexRow;
+}
+
+.UfoNight__Header__Container{
+    width: 100%;
+    height: 100%;
+    @extend %flexRow;
+
+}
+.UfoNight__Header__ContainerItem{
+    width: 33%;
+    height: 50px;
+    @extend %flexRow;
+}
+
+.UfoNight__Header__Logo__Img{
+    max-width: 100%;
+    max-height: 40px;
+}
+
+.UfoNight__Header__SearchForm__Input{
+    width: 375px;
+    height: 25px;
+    padding: 0px;
+    border: none;
+}
+
+.UfoNight__Header__SearchForm__Btn{
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    border: none;
+    padding: 0px;
+    background-color: white;
+    @extend %flexRow;
+    transition: 1s;
+}
+.UfoNight__Header__SearchForm__Btn:hover{
+    transition: 1s;
+    filter: invert(100);
+}
+.UfoNight__Header__SearchForm__Btn__Img{
+    width: 12px;
+    
+}
+
+.UfoNight__Header__UserMenuToggle__UserName{
+    color: white;
+    margin-right: 5px;
+    margin-top: 1px;
+}
+
+.UfoNight__Header__UserMenuToggle__UserPic{
+    width: 25px;
+    height: 25px;
+    padding: 0px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: transparent;
+}
+.UfoNight__Header__UserMenuToggle__UserPicImg{
+    max-width: 25px;
+    max-height: 25px;
+}
