@@ -1,0 +1,20 @@
+@import "../style/base.scss";
+
+.UfoNight__Home{
+    @extend %flexColumn;
+    width: 100vw;
+    height: auto;
+    min-height: calc(100vh - 160px - 83px);
+    align-items: center;
+}
+
+.UfoNight__Home__Container{
+    width: 1200px;
+    background-color: $mainColor;
+    height: auto;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+

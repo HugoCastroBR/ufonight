@@ -44,6 +44,7 @@
         </div>
         <script src="../../static/js/partials/header.js"></script>
     </header>
+
     <nav class="UfoNight__Nav">
         <link rel="stylesheet" href="../../static/css/partials/nav/nav.css">
 
@@ -60,8 +61,29 @@
         </div>
         
     </nav>
+    <main class="UfoNight__Home">
 
-    <main class="UfoNight__Footer__Home">
+        <div class="UfoNight__Home__Container">
+            
+            <link rel="stylesheet" href="../../static/css/home/slider.css">
+            <div class="UfoNight__Home__Slider__Container">
+
+                <div class="Slider_Container">
+
+                    <button class="ButtonSlide" onclick="next(-1)"><</button>
+            
+                    <div class="Slide stoped" id="slide-1">1</div>
+                    <div class="Slide" id="slide-2">2</div>
+                    <div class="Slide" id="slide-3">3</div>
+                    <div class="Slide" id="slide-4">4</div>
+            
+                    <button class="ButtonSlide" onclick="next(1)">></button>
+    
+                    <script src="../../static/js/partials/slider.js"></script>
+                </div>
+
+            </div>
+        </div>
 
     </main>
 

@@ -1,1 +1,38 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+.UfoNight__Home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.noDisplay {
+  display: none;
+}
+
+.UfoNight__Home {
+  width: 100vw;
+  height: auto;
+  min-height: calc(100vh - 160px - 83px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.UfoNight__Home__Container {
+  width: 1200px;
+  background-color: Black;
+  height: auto;
+  min-height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+/*# sourceMappingURL=index.css.map */
