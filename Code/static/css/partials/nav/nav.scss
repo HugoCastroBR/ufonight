@@ -20,6 +20,10 @@
     text-decoration: none;
 }
 
+.UfoNight__Nav__Highlights__Item__a:hover{
+    @extend %GrayHover;
+}
+
 @media screen and (max-width: 1200px){
     .UfoNight__Nav__Highlights__Container{
         justify-content: space-around;

@@ -43,7 +43,7 @@
     width: 25px;
     border: none;
     padding: 0px;
-    background-color: white;
+    background-color: $secondColor;
     @extend %flexRow;
     transition: 1s;
     justify-content: center;
@@ -83,6 +83,48 @@
     max-height: 40px;
 }
 
+.UfoNight__Header__Menu__Profile{
+    background-color: $mainColor;
+    position: absolute;
+    @extend %flexColumn;
+    margin-top: calc(150px + 50px);
+    margin-left: 1120px;
+    width: 180px;
+    height: 150px;
+    @extend %EndBlockBorder;
+}
+.UfoNight__Header__Menu__Profile__ButtonsA{
+    background-color: $mainColor;
+    @extend %flexColumn;
+    
+    
+}
+
+.UfoNight__Header__Menu__Item__a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    width: 100px;
+    height: 20px;
+    min-width: 100px;
+}
+.UfoNight__Header__Menu__Item__a:hover,.UfoNight__Header__Menu__Item__a__Exit:hover{
+    @extend %GrayHover
+}
+
+.UfoNight__Header__Menu__Item__a__Exit{
+    color: white;
+    margin-top: calc(150px - (20px * 4));
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    height: 20px;
+}
+
+
 @media screen and (max-width: 1200px){
     .UfoNight__Header__UserMenuToggle__Container{
         justify-content: center;
@@ -90,6 +132,10 @@
     .UfoNight__Header__Logo__Container{
         justify-content: center;
     }
+    .UfoNight__Header__Menu__Profile{
+        margin-left: calc(100% - 180px);
+    }
+
 }
 @media screen and (max-width: 800px){
     .UfoNight__Header__ContainerItem{

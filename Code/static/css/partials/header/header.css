@@ -1,3 +1,19 @@
+.UfoNight__Header__Menu__Profile, .UfoNight__Header__Menu__Profile__ButtonsA {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.UfoNight__Header__Menu__Item__a:hover, .UfoNight__Header__Menu__Item__a__Exit:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: silver;
+}
+
 .UfoNight__Header, .UfoNight__Header__Container, .UfoNight__Header__ContainerItem, .UfoNight__Header__SearchForm__Btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -17,7 +33,7 @@
   padding-right: calc(50vw - 600px);
 }
 
-.UfoNight__Header {
+.UfoNight__Header, .UfoNight__Header__Menu__Profile {
   border-bottom: 0.5px solid gray;
 }
 
@@ -73,7 +89,7 @@
   width: 25px;
   border: none;
   padding: 0px;
-  background-color: white;
+  background-color: White;
   -webkit-transition: 1s;
   transition: 1s;
   -webkit-box-pack: center;
@@ -119,6 +135,40 @@
   max-height: 40px;
 }
 
+.UfoNight__Header__Menu__Profile {
+  background-color: Black;
+  position: absolute;
+  margin-top: calc(150px + 50px);
+  margin-left: 1120px;
+  width: 180px;
+  height: 150px;
+}
+
+.UfoNight__Header__Menu__Profile__ButtonsA {
+  background-color: Black;
+}
+
+.UfoNight__Header__Menu__Item__a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  width: 100px;
+  height: 20px;
+  min-width: 100px;
+}
+
+.UfoNight__Header__Menu__Item__a__Exit {
+  color: white;
+  margin-top: calc(150px - (20px * 4));
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  height: 20px;
+}
+
 @media screen and (max-width: 1200px) {
   .UfoNight__Header__UserMenuToggle__Container {
     -webkit-box-pack: center;
@@ -129,6 +179,9 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .UfoNight__Header__Menu__Profile {
+    margin-left: calc(100% - 180px);
   }
 }
 

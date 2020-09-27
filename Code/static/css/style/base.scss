@@ -7,6 +7,11 @@ $secondColor: White;
     flex-direction: column;
 };
 
+%GrayHover{
+    transition: 0.5s;
+    color: rgb(192, 192, 192);
+}
+
 %flexRow{
     display: flex;
     flex-direction: Row;
