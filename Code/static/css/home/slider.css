@@ -2,22 +2,6 @@ body {
   overflow-x: hidden;
 }
 
-.UfoNight__Home__Slider__Container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  overflow-x: hidden;
-}
-
-.Slider_Container {
-  z-index: 1;
-  overflow-x: hidden;
-}
-
 .Slider_Container {
   position: absolute;
   display: -webkit-box;
@@ -46,6 +30,15 @@ body {
           transform: translateX(-50%);
   overflow-x: hidden;
   z-index: 11;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #slide-1 {
@@ -93,5 +86,50 @@ body {
   -webkit-transition: 2s;
   transition: 2s;
   left: 150%;
+}
+
+.Slide__Mobile {
+  display: none;
+  width: 500px;
+  height: 700px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .Slider_Container {
+    width: 100vw;
+  }
+  .Slide {
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .ButtonSlide {
+    margin-top: calc(350px - 30px);
+  }
+  .Slider_Container {
+    width: 100vw;
+    max-width: 500px;
+    height: 700px;
+  }
+  .Slide {
+    width: 100vw;
+    max-width: 500px;
+    height: 700px;
+  }
+  .Slide__Mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .Slide__Big {
+    display: none;
+  }
 }
 /*# sourceMappingURL=slider.css.map */
