@@ -92,6 +92,7 @@
     width: 180px;
     height: 150px;
     @extend %EndBlockBorder;
+    z-index: 20;
 }
 .UfoNight__Header__Menu__Profile__ButtonsA{
     background-color: $mainColor;

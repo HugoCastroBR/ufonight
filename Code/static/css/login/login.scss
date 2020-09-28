@@ -1,0 +1,78 @@
+@import "../style/base.scss";
+
+.UfoNight__Login{
+    background-color: $mainColor;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    @extend %flexColumn
+}
+
+.UfoNight__Login__Logo{
+    width: 300px;
+}
+
+.UfoNight__Login__FormSelector{
+    @extend %flexRow
+}
+.UfoNight__Login__ButtonSelectedUnder{
+    width: 150px;
+    height: 3px;
+    background-color: $secondColor;
+    display: block;
+}
+.UfoNight__Login__FormSelectorButton{
+    margin-top: 10px;
+    width: 150px;
+    text-align: start;
+    font-size: 25px;
+    color: $secondColor;
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.UfoNight__Login__ButtonSelectedUnder-LoginSelected{
+    transition: 1s;
+    margin-left: -150px;
+}
+
+.UfoNight__Login__ButtonSelectedUnder-RegisterSelected{
+    transition: 1s;
+    margin-left: 150px;
+}
+
+.UfoNight__Login__Form {
+    @extend %flexColumn;
+    width: 300px;
+    height: 400px;
+}
+.UfoNight__Login__Form__Input{
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border: none;
+    padding: 0px;
+    height: 25px;
+}
+.UfoNight__Login__Form__Btn{
+    margin-top: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    color: $secondColor;
+    cursor: pointer;
+}
+
+.UfoNight__Login__Form__CheckBox-div{
+    @extend %flexRow;
+    width: 300px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.UfoNight__Login__Form__CheckBoxText{
+    color: $secondColor;
+}
