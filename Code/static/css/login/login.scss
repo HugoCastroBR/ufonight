@@ -32,6 +32,12 @@
     border: none;
     padding: 0px;
     cursor: pointer;
+    transition: 0.5s;
+}
+
+.UfoNight__Login__FormSelectorButton:hover{
+    transition: 0.5s;
+    color: darken($color: $secondColor, $amount: 30);
 }
 
 .UfoNight__Login__ButtonSelectedUnder-LoginSelected{
@@ -63,6 +69,11 @@
     font-size: 25px;
     color: $secondColor;
     cursor: pointer;
+    transition: 0.5s;
+}
+.UfoNight__Login__Form__Btn:hover{
+    transition: 0.5s;
+    color: darken($color: $secondColor, $amount: 30);
 }
 
 .UfoNight__Login__Form__CheckBox-div{

@@ -58,6 +58,14 @@
   border: none;
   padding: 0px;
   cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.UfoNight__Login__FormSelectorButton:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #b3b3b3;
 }
 
 .UfoNight__Login__ButtonSelectedUnder-LoginSelected {
@@ -92,6 +100,14 @@
   font-size: 25px;
   color: White;
   cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.UfoNight__Login__Form__Btn:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #b3b3b3;
 }
 
 .UfoNight__Login__Form__CheckBox-div {
