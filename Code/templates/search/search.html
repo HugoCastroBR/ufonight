@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="Pt-Br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ufo Night</title>
+    <title>Results | UfoNight</title>
     <link rel="stylesheet" href="../../static/css/reset.css">
-    <link rel="stylesheet" href="../../static/css/home/index.css">
+    <link rel="stylesheet" href="../../static/css/search/search.css">
 </head>
 <body>
     <header class="UfoNight__Header">
         <link rel="stylesheet" href="../../static/css/partials/header/header.css">
-
+    
         <div class="UfoNight__Header__Menu__Profile noDisplay" >
             <div class="UfoNight__Header__Menu__Profile__ButtonsA">
                 <a class="UfoNight__Header__Menu__Item__a"  href="">Perfil</a>
@@ -19,37 +19,35 @@
             </div>
             <a class="UfoNight__Header__Menu__Item__a__Exit"  href="">Sair</a>
         </div>
-
+    
         <div class="UfoNight__Header__Container">
-
+    
             <div class="UfoNight__Header__ContainerItem UfoNight__Header__Logo__Container">
                 <img src="../../static/img/UfoNightLogoWhite.svg" alt="" class="UfoNight__Header__Logo__Img">
                 <img src="../../static/img/UfoNightLogoSmallWhite.svg" alt="" class="UfoNight__Header__Logo__ImgSmall">
             </div>
-
+    
             <form action="" class="UfoNight__Header__ContainerItem UfoNight__Header__SearchForm__Container">
                 <input type="text" class="UfoNight__Header__SearchForm__Input" placeholder="Busque nas estrelas">
                 <button class="UfoNight__Header__SearchForm__Btn">
                     <img src="../../static/img/Lupa.svg" alt="" class="UfoNight__Header__SearchForm__Btn__Img">
                 </button>
             </form>
-
+    
             <div class="UfoNight__Header__ContainerItem UfoNight__Header__UserMenuToggle__Container">
                 <h2 class="UfoNight__Header__UserMenuToggle__UserName">Hugo</h2>
                 <button class="UfoNight__Header__UserMenuToggle__UserPic">
                     <img class="UfoNight__Header__UserMenuToggle__UserPicImg Invert" src="https://caocidadao.com.br/wp-content/uploads/2019/09/user.png" alt="">
                 </button>
             </div>
-
+    
         </div>
         <script src="../../static/js/partials/header.js"></script>
     </header>
-
     <nav class="UfoNight__Nav">
         <link rel="stylesheet" href="../../static/css/partials/nav/nav.css">
-
         <div class="UfoNight__Nav__Highlights__Container">
-
+    
             <a class="UfoNight__Nav__Highlights__Item__a"href="">Destaques</a>
             <a class="UfoNight__Nav__Highlights__Item__a"href="">Brasil</a>
             <a class="UfoNight__Nav__Highlights__Item__a"href="">Abduções</a>
@@ -57,125 +55,97 @@
             <a class="UfoNight__Nav__Highlights__Item__a"href="">Conspiração</a>
             <a class="UfoNight__Nav__Highlights__Item__a"href="">Curiosidades</a>
             <a class="UfoNight__Nav__Highlights__Item__a"href="">Categorias</a>
-
+    
         </div>
         
     </nav>
-    <main class="UfoNight__Home">
 
-        <div class="UfoNight__Home__Container">
+
+
+    <main class="UfoNight__SearchResults">
+        <div class="UfoNight__SearchResultsPage">
+
+            <div class="UfoNight__ResultsContainer">
             
-            <link rel="stylesheet" href="../../static/css/home/slider.css">
-            <div class="UfoNight__Home__Slider__Container">
-
-                <div class="Slider_Container">
-
-                    <button class="ButtonSlide" onclick="next(-1)"><</button>
-            
-                    <div class="Slide stoped" id="slide-1">
-
-                        <div class="Slide__Mobile">
-                            <h1>11</h1>
-                        </div>
-                        
-                        <div class="Slide__Big">
-                            1
-                        </div>
-
-                    </div>
-
-                    <div class="Slide" id="slide-2">
-                        <div class="Slide__Mobile">
-                            22
-                        </div>
-                        
-                        <div class="Slide__Big">
-                            2
+                <div class="UfoNight__Result__ItemBoxContainer">
+                    <a class="UfoNight__Result__ImageContainer" href="">
+                        <img class="UfoNight__Result__Image" src="" alt="">
+                    </a>
+                    <div class="UfoNight__Result__AboutContainer">
+                        <a href="" class="UfoNight__Result__Title">Title</a>
+                        <span class="UfoNight__Result__Desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis doloribus eaque, ex ea adipisci quaerat quisquam nulla commodi architecto dicta voluptas mollitia, libero expedita neque cupiditate? Ad ullam architecto id.</span>
+                        <div class="UfoNight__Result__TagContainer">
+                            <a href="" class="UfoNight__Result__Tag">Tag</a>
                         </div>
                     </div>
-                    <div class="Slide" id="slide-3">
-                        <div class="Slide__Mobile">
-                            33
-                        </div>
-                        
-                        <div class="Slide__Big">
-                            3
-                        </div>
+                    <div class="UfoNight__Result__FavoriteContainer">
+                        <button class="UfoNight__Result__FavoriteBtn">
+                            <img class="UfoNight__Result__NotFavoriteImg" src="../../static/img/star_border_white.svg" alt="Favorite">
+                            <img class="UfoNight__Result__FavoriteImg noDisplay" src="../../static/img/star_white.svg" alt="Favorite">
+                        </button>
                     </div>
-                    <div class="Slide" id="slide-4">
-                        <div class="Slide__Mobile">
-                            44
-                        </div>
-                        
-                        <div class="Slide__Big">
-                            4
-                        </div>
-                    </div>
-            
-                    <button class="ButtonSlide" onclick="next(1)">></button>
-    
-                    <script src="../../static/js/partials/slider.js"></script>
-                </div>
-
-            </div>
-            <div class="UfoNight__Home__Container__Highlights">
-
-                <h2 class="UfoNight__Home__Highlights__Title">Ultimas Novidades:</h2>
-
-                <div class="UfoNight__Home__Highlights__Container">
-
-                    <div class="UfoNight__Home__Highlight__ItemBox">
-                        <div class="UfoNight__Home__Highlight__ItemBox__ImgBox">
-                            <img  class="UfoNight__Home__Highlight__ItemBox__ImgStar" src="../../static/img/star_border_white.svg"  alt="">
-        
-                        </div>
-                        <div class="UfoNight__Home__Highlight__ItemBox__TextBox">
-                            <a class="UfoNight__Home__Highlight__ItemBox__TextA" href="">
-                                Lorem ipsum dolor  autem velit necessitatibus maxime vel praesentium natus quam, exercitationem sapiente veniam!
-                            </a>
-                            <p class="UfoNight__Home__Highlight__ItemBox__TextP">
-                                Lorem
-                            </p>
-                        </div>
-                    </div>
-
-                    
-
                 </div>
 
                 
                 
+                
+                
+                
             </div>
+
+            <div class="UfoNight__ResultsPageContainer">
+                <div class="UfoNight__ResultsPages__text ">
+                    <span>192</span>
+                </div>
+
+                <div class="UfoNight__ResultsPages__FirstPages UfoNight__ResultsPages">
+                    <a href="" class="UfoNight__ResultsPageItem ">
+                        1
+                    </a>
+                </div>
+                <div class="UfoNight__ResultsPages__mainPages UfoNight__ResultsPages">
+                    <a href="" class="UfoNight__ResultsPageItem">
+                        2
+                    </a>
+                    <a href="" class="UfoNight__ResultsPageItem">
+                        3
+                    </a>
+                    <a href="" class="UfoNight__ResultsPageItem">
+                        4
+                    </a>
+                </div>
+                <div class="UfoNight__ResultsPages__endPages UfoNight__ResultsPages">
+                    <a href="" class="UfoNight__ResultsPageItem">
+                        10
+                    </a>
+                </div>
+            </div>
+
         </div>
-        
-
     </main>
+
+
 
     <footer class="UfoNight__Footer">
         <link rel="stylesheet" href="../../static/css/partials/footer/footer.css">
-
         <div class="UfoNight__Footer__Container">
-
             <div class="UfoNight__Footer__ItemInfo">
                 <a href="" class="UfoNight__Footer__ItemInfo__a">Termos de Uso</a>
                 <a href="" class="UfoNight__Footer__ItemInfo__a">Politica de dados</a>
                 <a href="" class="UfoNight__Footer__ItemInfo__a">Mapa do site</a>
                 <a href="" class="UfoNight__Footer__ItemInfo__a">Inicio</a>
             </div>
-            
             <div class="UfoNight__Footer__ItemInfo">
                 <img class="UfoNight__Footer__ItemInfo__img" src="../../static/img/UfoNightLogoWhite.svg" alt="">
                 <a href="" class="UfoNight__Footer__ItemInfo__a">2020 Todos os direitos reservados</a>
             </div>
-
             <div class="UfoNight__Footer__ItemInfo">
                 <a href="" class="UfoNight__Footer__ItemInfo__a">Ajuda</a>
                 <a href="" class="UfoNight__Footer__ItemInfo__a">Contato</a>
                 <a href="" class="UfoNight__Footer__ItemInfo__a">Ajude o projeto</a>
+                
             </div>
-
         </div>
-
     </footer>
 </body>
 </html>
