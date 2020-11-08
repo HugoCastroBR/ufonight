@@ -72,7 +72,8 @@ a, span {
 .UfoNight__ResultsPageContainer {
   height: 50px;
   background-color: Black;
-  width: 1200px;
+  width: 100vw;
+  max-width: 1200px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -178,7 +179,6 @@ a, span {
   text-decoration: none;
   display: block;
   max-width: 600px;
-  max-height: 50px;
   height: 50px;
 }
 
@@ -238,10 +238,92 @@ a, span {
       -ms-flex-align: center;
           align-items: center;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .UfoNight__Result__FavoriteBtn img {
   width: 25px;
   height: 25px;
+}
+
+@media screen and (max-width: 1000px) {
+  .UfoNight__ResultsContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .UfoNight__Result__Desc {
+    display: none;
+  }
+  .UfoNight__Result__ItemBoxContainer {
+    width: 300px;
+    height: auto;
+    max-height: 600px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .UfoNight__Result__Title {
+    height: 125px;
+    max-width: 300px;
+    width: 300px;
+    font-size: 20px;
+  }
+  .UfoNight__Result__AboutContainer {
+    padding: 0px;
+    max-width: 300px;
+  }
+  .UfoNight__Result__FavoriteContainer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 50px;
+  }
+  .UfoNight__Result__ImageContainer {
+    max-width: 300px;
+    max-height: 300px;
+    height: auto;
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .UfoNight__Result__Image {
+    width: 300px;
+    height: 200px;
+    background-color: white;
+  }
+  .UfoNight__Result__Tag {
+    display: block;
+    height: 25px;
+    font-size: 12px;
+    width: 300px;
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=search.css.map */

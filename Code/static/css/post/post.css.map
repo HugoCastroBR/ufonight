@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AC4CA,AAAA,UAAU,CAAA;EACN,OAAO,EAAE,IAAI;CAChB",
+    "sources": [
+        "post.scss",
+        "../style/base.scss"
+    ],
+    "names": [],
+    "file": "post.css"
+}
