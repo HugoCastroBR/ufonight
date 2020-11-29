@@ -174,6 +174,17 @@ a,span{
     display: none;
 }
 
+
+.UfoNight__SearchFiltersBox_Form{
+    width: 100%;
+    height: auto;
+    display: flex
+}
+
+.h4FilterItem{
+    color: white;
+    font-size: 11px;
+}
 .UfoNight__SearchFiltersBox_Toggle{
     color: white;
     display: block;
@@ -204,7 +215,7 @@ a,span{
     color: white;
 }
 .UfoNight__SearchFiltersBox{
-    padding-top: 5pxmd;
+    padding-top: 5px;
     width: 98%;
     padding-left: 1%;
     padding-right: 1%;
@@ -213,8 +224,14 @@ a,span{
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.InvisibleBug{
+    display: none !important;
+    opacity: 0px;
+}
+
 .FilterBox{
-    max-width: 200px;
+    max-width: 300px;
     min-width: 100px;
     display: flex;
     flex-direction: column;
@@ -236,7 +253,26 @@ a,span{
     color: white;
     font-size: 11px;
 }
-
+.FilterSearch__send_form_btn{
+    margin-top: 10px;
+    height: 20px;
+    cursor: pointer;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    border-radius: 20px;
+    width: 80px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 550;
+    letter-spacing: 0.1px;
+    transition: 0.5s;
+}
+.FilterSearch__send_form_btn:hover{
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+}
 
 .noDisplay{
     display: none;
