@@ -90,6 +90,11 @@ a,span{
     content: "Resultados";
     color: white;
 }
+.UfoNight__ResultsPageItem_FirstPageItem{
+    text-decoration: overline;
+    border: 2px solid white;
+    border-radius: 20px;
+}
 
 .UfoNight__Result__ItemBoxContainer{
     margin-bottom: 10px;
@@ -162,8 +167,81 @@ a,span{
 .UfoNight__Result__FavoriteBtn img{
     width: 25px;
     height: 25px;
+    @extend %flexRow;
+    display: block;
+}
+.UfoNight__Result__FavoriteBtn .UfoNight__Result__FavoriteImg{
+    display: none;
+}
+
+.UfoNight__SearchFiltersBox_Toggle{
+    color: white;
+    display: block;
+
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10px;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+    height: 30px;
+}
+.UfoNight__SearchFiltersBox_Toggle__change{
+    font-size: 20px;
+    padding-right: 10px;
+    transition: 0.5s;
+    margin-top: 8px;
+}
+.UfoNight__SearchFiltersBox_Toggle__change180{
+    transform: rotateX(180deg);
+    margin-top: -7px;
+    transition: 0.5s;
+}
+
+.UfoNight__SearchFiltersBox h2{
+    color: white;
+}
+.UfoNight__SearchFiltersBox{
+    padding-top: 5pxmd;
+    width: 98%;
+    padding-left: 1%;
+    padding-right: 1%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.FilterBox{
+    max-width: 200px;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
 
 }
+.FilterBox h3{
+
+    font-size: 14px;
+    color: white;
+}
+.FilterBox_item{
+    display: flex;
+    flex-direction: row;
+    max-width: 200px;
+    height: 20px;
+    align-items: center;
+}
+.FilterBox_item h4{
+    color: white;
+    font-size: 11px;
+}
+
+
+.noDisplay{
+    display: none;
+}
+
 @media screen and (max-width: 1000px){
     .UfoNight__ResultsContainer{
         display: flex;
@@ -197,6 +275,7 @@ a,span{
     .UfoNight__Result__FavoriteContainer{
         flex-direction: row;
         height: 50px;
+        margin-left: 25px;
     }
     .UfoNight__Result__ImageContainer{
         max-width: 300px;
