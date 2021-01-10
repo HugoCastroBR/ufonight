@@ -1,0 +1,146 @@
+{% extends "partials/template.html" %}
+{% block Title %}Resultados{% endblock %}
+{% block StyleSheet %}"../../static/css/search/search.css"{% endblock %}
+{% block main %}
+    <main class="UfoNight__SearchResults">
+        <div class="UfoNight__SearchResultsPage">
+            
+            <div class="UfoNight__SearchFiltersBox_Toggle">
+                Filtros
+                <div class="UfoNight__SearchFiltersBox_Toggle__change UfoNight__SearchFiltersBox_Toggle__change180">^</div>
+            </div>
+            
+            <form action="" class="UfoNight__SearchFiltersBox_Form">
+                <div class="UfoNight__SearchFiltersBox">
+
+                    <form class="FilterBox_item InvisibleBug" name="Invisible">
+
+                    </form>
+
+                    <div class="FilterBox" id="Tipo_Nave">
+                        <h3>Tipo de Nave</h3>
+    
+                        <form class="FilterBox_item" name="Tipo_Nave__Redonda">
+                            <input type="checkbox" name="" id="">
+                            <h4 class="h4FilterItem">Redonda</h4>
+                        </form>
+    
+                        <form class="FilterBox_item" name="Tipo_Nave__Triangular">
+                            <input type="checkbox" name="" id="">
+                            <h4>Triangular</h4>
+                        </form>
+    
+                        <form class="FilterBox_item" name="Tipo_Nave__Quadrada">
+                            <input type="checkbox" name="" id="">
+                            <h4>Quadrada</h4>
+                        </form>
+                        
+                    </div>
+    
+                    <div class="FilterBox" id="Especie">
+                        <h3>Especie</h3>
+    
+                        <form class="FilterBox_item" name="Especie__HighGrey">
+                            <input type="checkbox" name="" id="">
+                            <h4>High Grey</h4>
+                        </form>
+    
+                        <form class="FilterBox_item" name="Especie__SmallGrey">
+                            <input type="checkbox" name="" id="">
+                            <h4>Small Grey</h4>
+                        </form>
+    
+                        <form class="FilterBox_item" name="Especie__Nordico">
+                            <input type="checkbox" name="" id="">
+                            <h4>Nordico</h4>
+                        </form>
+                        
+                    </div>
+    
+                    <div class="FilterBox" id="Grau_de_Contato">
+                        <h3>Grau de Contato</h3>
+    
+                        <form class="FilterBox_item" name="Grau__um">
+                            <input type="checkbox" name="" id="">
+                            <h4>Primeiro Grau</h4>
+                        </form>
+    
+                        <form class="FilterBox_item" name="Grau__dois">
+                            <input type="checkbox" name="" id="">
+                            <h4>Segundo Grau</h4>
+                        </form>
+    
+                        <form class="FilterBox_item" name="Grau__tres">
+                            <input type="checkbox" name="" id="">
+                            <h4>Terceiro Grau</h4>
+                        </form>
+                        
+                    </div>
+
+                    
+                </div>
+                <button class="FilterSearch__send_form_btn">Filtrar</button>
+            </form>
+            
+
+            <div class="UfoNight__ResultsContainer">
+                
+                {%for Result in Search_Results%}
+                <div class="UfoNight__Result__ItemBoxContainer">
+                    <a class="UfoNight__Result__ImageContainer" href="">
+                        <img class="UfoNight__Result__Image" src="" alt="">
+                    </a>
+                    <div class="UfoNight__Result__AboutContainer">
+                        <a href="" class="UfoNight__Result__Title">{{Result.get_info("titulo")}}</a>
+                        <span class="UfoNight__Result__Desc">{{Result.get_info("desc")}}</span>
+                        <div class="UfoNight__Result__TagContainer">
+                            {%for tag in Result.get_info("tags") %}
+                            <a href="" class="UfoNight__Result__Tag">{{tag}}</a>
+                            {%endfor%}
+                        </div>
+                    </div>
+                    <div class="UfoNight__Result__FavoriteContainer">
+                        <button class="UfoNight__Result__FavoriteBtn">
+                            <img class="UfoNight__Result__NotFavoriteImg" src="../../static/img/star_border_white.svg" alt="Favorite">
+                            <img class="UfoNight__Result__FavoriteImg noDisplay" src="../../static/img/star_white.svg" alt="Favorite">
+                        </button>
+                    </div>
+                </div> 
+                {%endfor%}
+                
+                
+                
+            </div>
+
+            <div class="UfoNight__ResultsPageContainer">
+                <div class="UfoNight__ResultsPages__text ">
+                    <span>192</span>
+                </div>
+                <div class="UfoNight__ResultsPages__FirstPages UfoNight__ResultsPages">
+                    <a href="" class="UfoNight__ResultsPageItem UfoNight__ResultsPageItem_FirstPageItem">
+                        1
+                    </a>
+                </div>
+                <div class="UfoNight__ResultsPages__mainPages UfoNight__ResultsPages">
+                    <a href="" class="UfoNight__ResultsPageItem">
+                        2
+                    </a>
+                    <a href="" class="UfoNight__ResultsPageItem">
+                        3
+                    </a>
+                    <a href="" class="UfoNight__ResultsPageItem">
+                        4
+                    </a>
+                </div>
+                <div class="UfoNight__ResultsPages__endPages UfoNight__ResultsPages">
+                    <a href="" class="UfoNight__ResultsPageItem">
+                        10
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <script src="../../static/js/search/search.js"></script>
+    </main>
+
+{% endblock %}

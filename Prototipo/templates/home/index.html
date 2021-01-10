@@ -1,0 +1,97 @@
+{% extends "partials/template.html" %}
+{% block Title %}Home{% endblock %}
+{% block StyleSheet %}"../../static/css/home/index.css"{% endblock %}
+{% block main %}
+    <main class="UfoNight__Home">
+
+        <div class="UfoNight__Home__Container">
+            
+            <link rel="stylesheet" href="../../static/css/home/slider.css">
+            <div class="UfoNight__Home__Slider__Container">
+
+                <div class="Slider_Container">
+
+                    <button class="ButtonSlide" onclick="next(-1)"><</button>
+            
+                    <div class="Slide stoped" id="slide-1">
+
+                        <div class="Slide__Mobile">
+                            <h1>11</h1>
+                        </div>
+                        
+                        <div class="Slide__Big">
+                            1
+                        </div>
+
+                    </div>
+
+                    <div class="Slide" id="slide-2">
+                        <div class="Slide__Mobile">
+                            22
+                        </div>
+                        
+                        <div class="Slide__Big">
+                            2
+                        </div>
+                    </div>
+                    <div class="Slide" id="slide-3">
+                        <div class="Slide__Mobile">
+                            33
+                        </div>
+                        
+                        <div class="Slide__Big">
+                            3
+                        </div>
+                    </div>
+                    <div class="Slide" id="slide-4">
+                        <div class="Slide__Mobile">
+                            44
+                        </div>
+                        
+                        <div class="Slide__Big">
+                            4
+                        </div>
+                    </div>
+            
+                    <button class="ButtonSlide" onclick="next(1)">></button>
+    
+                    <script src="../../static/js/partials/slider.js"></script>
+                </div>
+
+            </div>
+            <div class="UfoNight__Home__Container__Highlights">
+
+                <h2 class="UfoNight__Home__Highlights__Title">Ultimas Novidades:</h2>
+
+                <div class="UfoNight__Home__Highlights__Container">
+
+                    {%for Novidade in Lista_Novidade_Home%}
+                    <div class="UfoNight__Home__Highlight__ItemBox">
+                        <div class="UfoNight__Home__Highlight__ItemBox__ImgBox">
+                            <button class="UfoNight__Home__Highlight__ItemBox__ImgStar_Btn">
+                                <img  class="UfoNight__Home__Highlight__ItemBox__ImgStar" src="../../static/img/star_border_white.svg"  alt="">
+                            </button>
+                            <img class="UfoNight__Home__Highlight__ItemBox__Img" src="../../../Design/svgs/alien3_white.svg"  alt="">
+                        </div>
+                        <div class="UfoNight__Home__Highlight__ItemBox__TextBox">
+                            <a class="UfoNight__Home__Highlight__ItemBox__TextA" href="">
+                                {{Novidade.get_info("titulo")}}
+                            </a>
+                            <p class="UfoNight__Home__Highlight__ItemBox__TextP">
+                                {{Novidade.get_info("categoria")}}
+                            </p>
+                        </div>
+                    </div>
+                    {%endfor%}
+
+                    
+
+                </div>
+
+                
+                
+            </div>
+        </div>
+    </main>
+    {% endblock %}
+

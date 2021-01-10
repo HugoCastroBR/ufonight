@@ -1,0 +1,47 @@
+$mainColor: Black;
+$secondColor: White;
+
+
+%flexColumn{
+    display: flex;
+    flex-direction: column;
+};
+
+%GrayHover{
+    transition: 0.5s;
+    color: rgb(192, 192, 192);
+}
+
+%flexRow{
+    display: flex;
+    flex-direction: Row;
+    align-items: center;
+};
+
+%WidthPadding{
+    width: 1200px;
+    padding-left: calc(50vw - 600px);
+    padding-right: calc(50vw - 600px);
+}
+
+%StartBlockBorder{
+    border-top: 0.5px solid gray;
+}
+
+%EndBlockBorder{
+    border-bottom: 0.5px solid gray;
+}
+
+%WidthPattern{
+    width: 1200px;
+}
+
+@media screen and (max-width: 1200px){
+    %WidthPadding{
+        width: 100vw;
+    }
+}
+
+.noDisplay{
+    display: none;
+}

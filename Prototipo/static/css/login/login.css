@@ -1,0 +1,127 @@
+.UfoNight__Login, .UfoNight__Login__Form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.UfoNight__Login__FormSelector, .UfoNight__Login__Form__CheckBox-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: Row;
+          flex-direction: Row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.noDisplay {
+  display: none;
+}
+
+.UfoNight__Login {
+  background-color: Black;
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.UfoNight__Login__Logo {
+  width: 300px;
+}
+
+.UfoNight__Login__ButtonSelectedUnder {
+  width: 150px;
+  height: 3px;
+  background-color: White;
+  display: block;
+}
+
+.UfoNight__Login__FormSelectorButton {
+  margin-top: 10px;
+  width: 150px;
+  text-align: start;
+  font-size: 25px;
+  color: White;
+  background-color: transparent;
+  border: none;
+  padding: 0px;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.UfoNight__Login__FormSelectorButton:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #b3b3b3;
+}
+
+.UfoNight__Login__ButtonSelectedUnder-LoginSelected {
+  -webkit-transition: 1s;
+  transition: 1s;
+  margin-left: -150px;
+}
+
+.UfoNight__Login__ButtonSelectedUnder-RegisterSelected {
+  -webkit-transition: 1s;
+  transition: 1s;
+  margin-left: 150px;
+}
+
+.UfoNight__Login__Form {
+  width: 300px;
+  height: 400px;
+}
+
+.UfoNight__Login__Form__Input {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  border: none;
+  padding: 0px;
+  height: 25px;
+}
+
+.UfoNight__Login__Form__Btn {
+  margin-top: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  color: White;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.UfoNight__Login__Form__Btn:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #b3b3b3;
+}
+
+.UfoNight__Login__Form__CheckBox-div {
+  width: 300px;
+  height: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.UfoNight__Login__Form__CheckBoxText {
+  color: White;
+}
+/*# sourceMappingURL=login.css.map */

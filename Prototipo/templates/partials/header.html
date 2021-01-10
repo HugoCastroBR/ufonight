@@ -1,0 +1,38 @@
+{% block header %}
+<header class="UfoNight__Header">
+    <link rel="stylesheet" href="../../static/css/partials/header/header.css">
+
+    <div class="UfoNight__Header__Menu__Profile noDisplay" >
+        <div class="UfoNight__Header__Menu__Profile__ButtonsA">
+            <a class="UfoNight__Header__Menu__Item__a"  href="">Perfil</a>
+            <a class="UfoNight__Header__Menu__Item__a"  href="">Favoritos</a>
+            <a class="UfoNight__Header__Menu__Item__a"  href="">Configurações</a>
+        </div>
+        <a class="UfoNight__Header__Menu__Item__a__Exit"  href="">Sair</a>
+    </div>
+
+    <div class="UfoNight__Header__Container">
+
+        <div class="UfoNight__Header__ContainerItem UfoNight__Header__Logo__Container">
+            <img src="../../static/img/UfoNightLogoWhite.svg" alt="" class="UfoNight__Header__Logo__Img">
+            <img src="../../static/img/UfoNightLogoSmallWhite.svg" alt="" class="UfoNight__Header__Logo__ImgSmall">
+        </div>
+
+        <form action="" class="UfoNight__Header__ContainerItem UfoNight__Header__SearchForm__Container">
+            <input type="text" class="UfoNight__Header__SearchForm__Input" placeholder="Busque nas estrelas">
+            <button class="UfoNight__Header__SearchForm__Btn">
+                <img src="../../static/img/Lupa.svg" alt="" class="UfoNight__Header__SearchForm__Btn__Img">
+            </button>
+        </form>
+
+        <div class="UfoNight__Header__ContainerItem UfoNight__Header__UserMenuToggle__Container">
+            <h2 class="UfoNight__Header__UserMenuToggle__UserName">Hugo</h2>
+            <button class="UfoNight__Header__UserMenuToggle__UserPic">
+                <img class="UfoNight__Header__UserMenuToggle__UserPicImg Invert" src="https://caocidadao.com.br/wp-content/uploads/2019/09/user.png" alt="">
+            </button>
+        </div>
+
+    </div>
+    <script src="../../static/js/partials/header.js"></script>
+</header>
+{% endblock %}

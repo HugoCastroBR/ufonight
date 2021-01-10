@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | UfoNight</title>
+    <link rel="stylesheet" href="../../static/css/reset.css">
+    <link rel="stylesheet" href="../../static/css/login/login.css">
+</head>
+<body>
+    <main class="UfoNight__Login">
+        <img src="../../static/img/UfoNightLogoWhite.svg" class="UfoNight__Login__Logo" alt="">
+        <div class="UfoNight__Login__FormSelector">
+            <button class="UfoNight__Login__FormSelectorButton" id="ButtonSelected__Login" >Entrar</button>
+            <button class="UfoNight__Login__FormSelectorButton" id="ButtonSelected__Register" >Registrar</button>
+            
+        </div>
+        <div class="UfoNight__Login__ButtonSelectedUnder UfoNight__Login__ButtonSelectedUnder-LoginSelected">
+                
+        </div>
+
+        <form class="UfoNight__Login__Form UfoNight__Login__Form__Enter" action="">
+            <input class="UfoNight__Login__Form__Input" name="Login_Username" type="text" placeholder="Nome de usuario" required>
+            <input class="UfoNight__Login__Form__Input" name="Login_Password" type="password" placeholder="Senha" required>
+            <div class="UfoNight__Login__Form__CheckBox-Div">
+                <input class="UfoNight__Login__Form__CheckBox" name="Login_CheckBoxTerms"  type="checkbox" name="" id="">
+                <span class="UfoNight__Login__Form__CheckBoxText">
+                    Aceito os termos de uso
+                </span>
+            </div>
+            <button class="UfoNight__Login__Form__Btn">
+                Entrar
+            </button>
+        </form>
+
+        <form class="UfoNight__Login__Form UfoNight__Login__Form__Register noDisplay" action="">
+            <input class="UfoNight__Login__Form__Input" name="Register_Username" type="text" placeholder="Nome de usuario" required>
+            <input class="UfoNight__Login__Form__Input" name="Register_Email" type="text" placeholder="Email" required>
+            <input class="UfoNight__Login__Form__Input" name="Register_Password" type="password" placeholder="Senha" required>
+            <input class="UfoNight__Login__Form__Input" name="Register_Password 2" type="password" placeholder="Repita a senha" required>
+            <div class="UfoNight__Login__Form__CheckBox-Div">
+                <input class="UfoNight__Login__Form__CheckBox" name="Register_CheckBoxTerms" type="checkbox" name="" id="">
+                <span class="UfoNight__Login__Form__CheckBoxText">
+                    Aceito os termos de uso
+                </span>
+            </div>
+            <button class="UfoNight__Login__Form__Btn">
+                Registrar
+            </button>
+        </form>
+        <script src="../../static/js/login/login.js"></script>
+    </main>
+</body>
+</html>
