@@ -35,9 +35,38 @@ class Result(Post):
         self._desc = desc
         self._tags = tags
     
+
+
+
+Users = []
+
+
+
 class User():
-    def __init__(self,nome,email):
+    def __init__(self,user_id,name,email,_password,_password_confirm = None,
+    comment_permission = True ,report_permission = True, _post_permission = False):
+        self.id = user_id
+        self.name = name
+        self.email = email
+        self._password = _password
+        self.comment_permission = comment_permission
+        self.report_permission = report_permission
+        self._post_permission = _post_permission
+
+    def set_password(user_name,new_password):
+        for User in Users:
+            if User.name == user_name:
+                User._password = new_password
+
+    def compare_password(user_name):
         pass
+
+    
+
+def create_User(name,email,password,password_confirm = None,
+    comment_permission = True ,report_permission = True, _post_permission = False):
+
+        Users.append(User(len(Users),name,email,password,password_confirm))
 
 
 
@@ -51,7 +80,7 @@ Search_Results = [Result("Teste","random",["a","b","aqua"])] # pegar cada valor 
 
 userPublicData = {'username':"Hugo"}
 
-Users = {'Hugo':'teste'}
+
 
 def RefreshSession():
     try:
@@ -60,7 +89,7 @@ def RefreshSession():
         session['User'] = False
 
     if session['User'] == False:
-        session['User'] = 'Login'
+        session['User'] = ''
     userPublicData['username'] = session['User']
 
 @app.route('/')
@@ -93,11 +122,12 @@ def login():
 
 @app.route('/try_login',methods=['POST',])
 def try_login():
-    if request.form['Login_Username'] in Users and request.form['Login_Password'] == Users[request.form['Login_Username']]:
-        print("logado")
-        session['User'] = request.form['Login_Username'] 
-        RefreshSession()
-        return redirect('/')
+    for user in Users:
+        if request.form['Login_Username'] == user.name  and request.form['Login_Password'] == user._password:
+            print("logado")
+            session['User'] = request.form['Login_Username'] 
+            RefreshSession()
+            return redirect('/')
     print(request.form['Login_Username'])
     print(request.form['Login_Password'])
     return redirect('/login')
@@ -106,9 +136,20 @@ def try_login():
 @app.route('/logout', methods=['POST',])
 def logout():
     print("logout")
-    session['User'] = 'Login'
+    session['User'] = ''
     RefreshSession()
     return redirect("/")
+    
+@app.route('/register', methods=['POST',])
+def register():
+    print(request.form) 
+    # fazer checkbox de termos de uso funcionar com js e ser clicavel para ler
+    # fazer Error funcionar
+    create_User(request.form['Register_Username'],request.form['Register_Email'],request.form['Register_Password'],request.form['Register_Password 2'])
+    print("users: ")
+    return redirect('/login')
+
+
 
 # Fazer favoritar funcionar
 

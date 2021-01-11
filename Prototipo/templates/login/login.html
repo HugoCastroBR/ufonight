@@ -24,9 +24,6 @@
             <input class="UfoNight__Login__Form__Input" name="Login_Password" type="password" placeholder="Senha" required>
             <div class="UfoNight__Login__Form__CheckBox-Div">
                 <input class="UfoNight__Login__Form__CheckBox" name="Login_CheckBoxTerms"  type="checkbox" name="" id="">
-                <span class="UfoNight__Login__Form__CheckBoxText">
-                    Aceito os termos de uso
-                </span>
                 <!-- adicionar aqui em baixo erro de senha errada editar no scss tb-->
                 <p class="UfoNight__Login__Form__CheckBoxText"> 
                     Error
@@ -37,7 +34,7 @@
             </button>
         </form>
 
-        <form class="UfoNight__Login__Form UfoNight__Login__Form__Register noDisplay" action="">
+        <form class="UfoNight__Login__Form UfoNight__Login__Form__Register noDisplay" action="/register" method="POST">
             <input class="UfoNight__Login__Form__Input" name="Register_Username" type="text" placeholder="Nome de usuario" required>
             <input class="UfoNight__Login__Form__Input" name="Register_Email" type="text" placeholder="Email" required>
             <input class="UfoNight__Login__Form__Input" name="Register_Password" type="password" placeholder="Senha" required>
@@ -47,6 +44,10 @@
                 <span class="UfoNight__Login__Form__CheckBoxText">
                     Aceito os termos de uso
                 </span>
+                <!-- adicionar aqui em baixo erro de senha errada editar no scss tb-->
+                <p class="UfoNight__Login__Form__CheckBoxText"> 
+                    Error
+                </p>
             </div>
             <button class="UfoNight__Login__Form__Btn">
                 Registrar
