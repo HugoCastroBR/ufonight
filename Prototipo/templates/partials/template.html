@@ -19,7 +19,11 @@
             <a class="UfoNight__Header__Menu__Item__a"  href="">Favoritos</a>
             <a class="UfoNight__Header__Menu__Item__a"  href="">Configurações</a>
         </div>
-        <a class="UfoNight__Header__Menu__Item__a__Exit"  href="">Sair</a>
+
+        <form action="/logout" method="POST" name="Logout_btn" class="Logout__form__logout">
+            <button class="UfoNight__Header__Menu__Item__btn__Exit"  href="" >Sair</button>
+        </form>
+
     </div>
 
     <div class="UfoNight__Header__Container">
@@ -37,10 +41,17 @@
         </form>
 
         <div class="UfoNight__Header__ContainerItem UfoNight__Header__UserMenuToggle__Container">
-            <h2 class="UfoNight__Header__UserMenuToggle__UserName">Hugo</h2>
+    
+
+            {%if userPublicData['username'] != 'Login'%}
+            <a class="UfoNight__Header__UserMenuToggle__UserName">{{userPublicData['username']}}</a>
             <button class="UfoNight__Header__UserMenuToggle__UserPic">
                 <img class="UfoNight__Header__UserMenuToggle__UserPicImg Invert" src="https://caocidadao.com.br/wp-content/uploads/2019/09/user.png" alt="">
             </button>
+            {%else%}
+            <a class="UfoNight__Header__UserMenuToggle__UserName" href="/login">{{userPublicData['username']}}</a>
+            {%endif%}
+            
         </div>
 
     </div>

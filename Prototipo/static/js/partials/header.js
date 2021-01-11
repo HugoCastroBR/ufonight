@@ -12,4 +12,9 @@ UserPic.addEventListener("click",function(){ //add show div when clicked to User
     }
 })
 
+function Logout(){
+    document.querySelector("UfoNight__Header__Menu__Item__a__Exit").preventDefault()
+    document.querySelector(".Logout__form__logout").submit()
+}
 //End Menu toggle
+

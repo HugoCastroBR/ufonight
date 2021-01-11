@@ -39,6 +39,7 @@ FiltersContainerToggler.addEventListener("click",self => {
 })
 
 
+
 //Pages
 let Pages = document.querySelectorAll(".UfoNight__ResultsPageItem")
 
@@ -46,3 +47,11 @@ Pages[1].innerHTML = parseInt(Pages[0].innerHTML) + 1
 Pages[2].innerHTML = parseInt(Pages[0].innerHTML) + 2
 Pages[3].innerHTML = parseInt(Pages[0].innerHTML) + 3
 Pages[4].innerHTML = parseInt(Pages[0].innerHTML) + 9
+
+document.querySelectorAll(".UfoNight__Result__Tag").forEach( element =>{
+    element.addEventListener("click",self=>{
+        self.preventDefault()
+        document.querySelector(".Search_Item_tag").value = self.path[0].innerHTML
+        document.querySelector(".UfoNight__Result__TagContainer").submit()
+    })
+})

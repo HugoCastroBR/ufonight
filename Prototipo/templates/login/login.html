@@ -9,7 +9,7 @@
 </head>
 <body>
     <main class="UfoNight__Login">
-        <img src="../../static/img/UfoNightLogoWhite.svg" class="UfoNight__Login__Logo" alt="">
+        <img src="../../static/img/UfoNightLogoWhite.svg" class="UfoNight__Login__Logo" alt="" onclick="location.href='/'">
         <div class="UfoNight__Login__FormSelector">
             <button class="UfoNight__Login__FormSelectorButton" id="ButtonSelected__Login" >Entrar</button>
             <button class="UfoNight__Login__FormSelectorButton" id="ButtonSelected__Register" >Registrar</button>
@@ -19,7 +19,7 @@
                 
         </div>
 
-        <form class="UfoNight__Login__Form UfoNight__Login__Form__Enter" action="">
+        <form class="UfoNight__Login__Form UfoNight__Login__Form__Enter" action="/try_login" method="POST">
             <input class="UfoNight__Login__Form__Input" name="Login_Username" type="text" placeholder="Nome de usuario" required>
             <input class="UfoNight__Login__Form__Input" name="Login_Password" type="password" placeholder="Senha" required>
             <div class="UfoNight__Login__Form__CheckBox-Div">
@@ -27,9 +27,13 @@
                 <span class="UfoNight__Login__Form__CheckBoxText">
                     Aceito os termos de uso
                 </span>
+                <!-- adicionar aqui em baixo erro de senha errada editar no scss tb-->
+                <p class="UfoNight__Login__Form__CheckBoxText"> 
+                    Error
+                </p>
             </div>
             <button class="UfoNight__Login__Form__Btn">
-                Entrar
+                Entrar 
             </button>
         </form>
 

@@ -112,6 +112,7 @@
   color: white;
   margin-right: 5px;
   margin-top: 1px;
+  text-decoration: none;
 }
 
 .UfoNight__Header__UserMenuToggle__UserPic {
@@ -168,6 +169,27 @@
   text-decoration: none;
   font-size: 20px;
   height: 20px;
+  background-color: transparent;
+  border: 0px;
+  border: none;
+  padding: 0px;
+  padding: none;
+}
+
+.UfoNight__Header__Menu__Item__btn__Exit {
+  color: white;
+  margin-top: calc(150px - (20px * 4));
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 0px;
+  border: none;
+  padding: 0px;
+  padding: none;
 }
 
 @media screen and (max-width: 1200px) {

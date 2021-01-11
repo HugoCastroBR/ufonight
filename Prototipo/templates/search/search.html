@@ -93,11 +93,12 @@
                     <div class="UfoNight__Result__AboutContainer">
                         <a href="" class="UfoNight__Result__Title">{{Result.get_info("titulo")}}</a>
                         <span class="UfoNight__Result__Desc">{{Result.get_info("desc")}}</span>
-                        <div class="UfoNight__Result__TagContainer">
+                        <form class="UfoNight__Result__TagContainer" name="TagItens" method="POST" action="/procurar_tag">
                             {%for tag in Result.get_info("tags") %}
-                            <a href="" class="UfoNight__Result__Tag">{{tag}}</a>
+                            <a href="" class="UfoNight__Result__Tag" >{{tag}}</a>
                             {%endfor%}
-                        </div>
+                            <input type="text" name="Search_Item_tag" class="Search_Item_tag" style="display: none;" id="">
+                        </form>
                     </div>
                     <div class="UfoNight__Result__FavoriteContainer">
                         <button class="UfoNight__Result__FavoriteBtn">
@@ -114,7 +115,7 @@
 
             <div class="UfoNight__ResultsPageContainer">
                 <div class="UfoNight__ResultsPages__text ">
-                    <span>192</span>
+                    <span>{{nmr_results}}</span>
                 </div>
                 <div class="UfoNight__ResultsPages__FirstPages UfoNight__ResultsPages">
                     <a href="" class="UfoNight__ResultsPageItem UfoNight__ResultsPageItem_FirstPageItem">
