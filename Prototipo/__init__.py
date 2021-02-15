@@ -149,6 +149,9 @@ def register():
     print("users: ")
     return redirect('/login')
 
+@app.route('/post')
+def newpost():
+    return render_template("post/post.html", userPublicData = userPublicData )
 
 
 # Fazer favoritar funcionar

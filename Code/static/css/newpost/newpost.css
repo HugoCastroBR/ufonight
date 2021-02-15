@@ -1,4 +1,219 @@
+.UfoNight__NewPost_container, .NewPost__Post_head__Main_infos, .Post_head__Main__Title_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.NewPost__Post_head, .Post_head__Main__Types_container, .Main__Types_button_preset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: Row;
+          flex-direction: Row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .noDisplay {
+  display: none;
+}
+
+.UfoNight__NewPost {
+  min-height: calc(100vh - 240px);
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.UfoNight__NewPost_container {
+  background-color: Black;
+  width: 100vw;
+  max-width: 1200px;
+  height: auto;
+  min-height: calc(100vh - 240px);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.NewPost__Post_head {
+  width: 96%;
+  height: 200px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.NewPost__Post_head__picture {
+  width: 300px;
+  height: 168px;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.Post_head__picture__options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.NewPost__Post_head__picture__upload_input {
+  color: white;
+  width: 250px;
+  margin-top: 90px;
+  height: 20px;
+  z-index: 11;
+}
+
+.Post_head__picture__change::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.NewPost__Post_head__picture__upload_preview {
+  position: absolute;
+  z-index: 1;
+}
+
+.NewPost__Post_head__picture__upload_preview_off {
+  z-index: 1;
+  background-color: transparent;
+  width: 0px;
+  height: 0px;
+}
+
+.NewPost__Post_head__picture__upload_preview_on {
+  z-index: 1;
+  background-color: transparent;
+  height: 168px;
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  margin-bottom: 15px;
+}
+
+.NewPost__Post_head__picture span {
+  display: block;
+  height: 15px;
+  color: white;
+  z-index: 3;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.NewPost__Post_head__Main_infos {
+  padding-left: 20px;
+  width: 800px;
+}
+
+.Post_head__Main__Title_container {
+  height: 30px;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.Post_head__Main__Title_input {
+  width: 600px;
+  height: 25px;
+  border-radius: 25px;
+  border: none;
+  font-size: 14px;
+}
+
+.Post_head__Main__Types_container {
+  width: 100%;
+  height: 70px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.Main__Types_button_preset {
+  width: 200px;
+  margin-right: 10px;
+}
+
+.head__Main__button_preset {
+  width: 100px;
+  border: none;
+  border: 1px solid white;
+  height: 30px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+.button_preset_true {
+  border-radius: 0px 25px 25px 0px;
+}
+
+.button_preset_false {
+  border-radius: 25px 0px 0px 25px;
+}
+
+.button_preset_the_selected {
+  background-color: white;
+  color: black;
+}
+
+.Main__Types_button_preset-text-result {
   display: none;
 }
 /*# sourceMappingURL=newpost.css.map */

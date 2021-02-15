@@ -59,8 +59,45 @@
         </div>
         
     </nav>
-    <main>
+    <main class="UfoNight__NewPost">
+        <form class="UfoNight__NewPost_container">
+            <div class="NewPost__Post_head">
 
+                <div class="NewPost__Post_head__picture">
+                    <span>Recomendado imagem 16:9</span>
+                    <input type="file" name="" id="files" class="NewPost__Post_head__picture__upload_input" accept="image/png, image/jpeg">
+                    <img src="" alt="" id="image" class="NewPost__Post_head__picture__upload_preview">
+                </div>
+                <div class="NewPost__Post_head__Main_infos">
+
+                    <div class="Post_head__Main__Title_container">
+                        <input type="text" name="" id="" class="Post_head__Main__Title_input" placeholder="Titulo" maxlength="75">
+                    </div>
+                    <div class="Post_head__Main__Types_container">
+
+                        <div class="Main__Types_button_preset" id="Active_type">
+                            <button class="head__Main__button_preset button_preset_false button_preset_the_selected">Rascunho</button>
+                            <button class="head__Main__button_preset button_preset_true">Ativo</button>
+                            <span class="Main__Types_button_preset-text-result">True</span>
+                        </div>
+
+                        <div class="Main__Types_button_preset" id="Html_bool">
+                            <button class="head__Main__button_preset button_preset_false button_preset_the_selected">HTML</button>
+                            <button class="head__Main__button_preset button_preset_true">RICH TEXT</button>
+                            <span class="Main__Types_button_preset-text-result">True</span>
+                        </div>
+
+                    </div>
+
+                    <div></div>
+
+                </div>
+            </div>
+            <div class="NewPost__Post_tags"></div>
+            <div class="NewPost__Post_content"></div>
+        </form>
+        <script src="../../static/js/newpost/newpost.js"></script>
+        <script src="../../static/js/partials/Type_button.js"></script>
     </main>
 
     <footer class="UfoNight__Footer">
