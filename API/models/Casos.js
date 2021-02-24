@@ -2,6 +2,7 @@ const connect = require('../sctructure/connect.js')
 
 
 class Casos{
+    
 
     return_error(res,error,results,status_error = 201,status_result = 400){
         if (error){
@@ -36,6 +37,20 @@ class Casos{
             })
         }
         
+    }
+
+    delete(res, id){
+        connect.query(`Delete from ufonight.casos where id=${id}`,(error,results) =>{
+            this.return_error(res,error,results)
+        })
+        
+    }
+
+    update(id,caso,res){
+        const sql = `UPDATE ufonight.casos SET ? where id=${id}`
+        connect.query(sql,caso,(error,results) =>{
+            this.return_error(res,error,results)
+        })
     }
 }
 
