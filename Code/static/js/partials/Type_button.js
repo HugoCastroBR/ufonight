@@ -55,7 +55,8 @@ class Type_button{
         
     }
 }
-document.querySelectorAll(".Main__Types_button_preset").forEach(element => { //For each element in the container transform into a Type_button
+
+document.querySelectorAll(".Main__Types_button_preset").forEach(element => { // create a new element based in class
     new Type_button(element.id) 
 
 })
