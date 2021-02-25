@@ -19,7 +19,6 @@ class Casos{
 
 
         const sql = 'INSERT INTO Casos SET ?'
-
         connect.query(sql, caso,(error,results) =>{
             this.return_error(res,error,results)
         })
@@ -28,10 +27,12 @@ class Casos{
 
     search(res,id = null){
         if (id == null){
-            connect.query('SELECT * FROM ufonight.casos',(error,results) =>{
+            const sql = 'SELECT * FROM ufonight.casos'
+            connect.query(sql,(error,results) =>{
                 this.return_error(res,error,results)
             })
         }else{
+            console.log(id)
             connect.query(`SELECT * FROM ufonight.casos WHERE id=${id}`,(error,results) =>{
                 this.return_error(res,error,results)
             })
@@ -51,6 +52,16 @@ class Casos{
         connect.query(sql,caso,(error,results) =>{
             this.return_error(res,error,results)
         })
+    }
+
+    precise_search(res,search_for){
+        console.log(search_for) //fazer espaço funcionar
+        const sql = `SELECT * FROM ufonight.casos WHERE Titulo LIKE "${search_for}" or "${search_for}" IN (Titulo)`
+        console.log(sql)
+        connect.query(sql,(error,results)=>{
+            this.return_error(res,error,results)
+        })
+        
     }
 }
 

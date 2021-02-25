@@ -5,13 +5,12 @@ const Casos = require('../models/Casos.js')
 module.exports = app => {
     app.get('/casos', (req, res) => {
         
-        Casos.search(res,req)
+        Casos.search(res)
     })
 
 
     app.post('/casos', (req,res) =>{
         const caso = req.body
-
 
 
         Casos.add(caso,res)
@@ -39,4 +38,11 @@ module.exports = app => {
 
         Casos.update(id,caso,res)
     })
+
+    app.get('/search?:search',(req,res) =>{
+        const search = req.query.search
+        Casos.precise_search(res,search)
+    })
+
+
 }
