@@ -1,5 +1,6 @@
 const Casos = require('../models/Casos.js')
 
+const querystring = require('querystring')
 
 
 module.exports = app => {
@@ -42,6 +43,12 @@ module.exports = app => {
     app.get('/search?:search',(req,res) =>{
         const search = req.query.search
         Casos.precise_search(res,search)
+    })
+
+    app.post('/search?:search',(req,res) =>{
+        const search = req.query.search
+        const filters = req.body
+        Casos.precise_search(res,search,filters)
     })
 
 

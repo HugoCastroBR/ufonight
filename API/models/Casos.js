@@ -1,68 +1,49 @@
-const connect = require('../sctructure/connect.js')
+const connect = require('../sctructure/database/connect.js')
+const _query = require('../sctructure/database/queries.js')
 
-
+const return_error = require('../sctructure/functions/Return_error.js')
+const objToQuerry_str = require('../sctructure/functions/objToQuerry_str.js')
 class Casos{
-    
 
-    return_error(res,error,results,status_error = 201,status_result = 400){
-        if (error){
-    
-            return res.status(status_error).json({error})
 
-        }else{
-            
-            return res.status(status_result).json({results})
-        }
-    }
-    
     add(caso,res){
-
-
-        const sql = 'INSERT INTO Casos SET ?'
-        connect.query(sql, caso,(error,results) =>{
-            this.return_error(res,error,results)
-        })
-
+        console.log(caso)
+        const sql = ('INSERT INTO Casos SET ?')
+        _query(sql,res,caso)
     }
 
     search(res,id = null){
         if (id == null){
             const sql = 'SELECT * FROM ufonight.casos'
-            connect.query(sql,(error,results) =>{
-                this.return_error(res,error,results)
-            })
+            _query(sql,res)
         }else{
-            console.log(id)
-            connect.query(`SELECT * FROM ufonight.casos WHERE id=${id}`,(error,results) =>{
-                this.return_error(res,error,results)
-            })
+            const sql = `SELECT * FROM ufonight.casos WHERE id=${id}`
+            _query(sql,res)
         }
         
     }
 
     delete(res, id){
-        connect.query(`Delete from ufonight.casos where id=${id}`,(error,results) =>{
-            this.return_error(res,error,results)
-        })
-        
+        const sql = `Delete from ufonight.casos where id=${id}`
+        _query(sql,res)
     }
 
     update(id,caso,res){
         const sql = `UPDATE ufonight.casos SET ? where id=${id}`
-        connect.query(sql,caso,(error,results) =>{
-            this.return_error(res,error,results)
-        })
+        _query(sql,res)
     }
 
-    precise_search(res,search_for){
-        console.log(search_for) //fazer espaço funcionar
-        const sql = `SELECT * FROM ufonight.casos WHERE Titulo LIKE "${search_for}" or "${search_for}" IN (Titulo)`
-        console.log(sql)
-        connect.query(sql,(error,results)=>{
-            this.return_error(res,error,results)
-        })
+    
+
+    precise_search(res,search_for,filters = ''){
+
+
+        const sql = (`SELECT * FROM ufonight.casos WHERE LOWER ( REPLACE (Titulo,' ' ,'')) RLIKE LOWER ( REPLACE('${search_for}',' ','')) ${objToQuerry_str(filters)}`)
+        console
+        _query(sql,res)
         
     }
+    
 }
 
 
