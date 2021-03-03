@@ -30,7 +30,7 @@ class Casos{
 
     update(id,caso,res){
         const sql = `UPDATE ufonight.casos SET ? where id=${id}`
-        _query(sql,res)
+        _query(sql,res,caso)
     }
 
     

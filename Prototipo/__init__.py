@@ -119,7 +119,7 @@ def procurar_tag():
 @app.route('/login')
 def login():
     return render_template("login/login.html", userPublicData = userPublicData)
-
+asd
 @app.route('/try_login',methods=['POST',])
 def try_login():
     for user in Users:

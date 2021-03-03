@@ -34,7 +34,6 @@ class Type_button{
                 e.true_value.classList.remove("button_preset_the_selected")
             }
         }
-
         this.false_value.addEventListener("click",event => { // Add the click function which says what to do when get clicked
             event.preventDefault()
             if(this.selected != false){
