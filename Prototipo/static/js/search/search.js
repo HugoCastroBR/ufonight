@@ -55,3 +55,7 @@ document.querySelectorAll(".UfoNight__Result__Tag").forEach( element =>{
         document.querySelector(".UfoNight__Result__TagContainer").submit()
     })
 })
+
+
+ // FETCH API
+

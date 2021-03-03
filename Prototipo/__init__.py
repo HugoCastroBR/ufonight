@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request,redirect,session
-import ast
+import api
 
 app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
@@ -30,10 +30,9 @@ class Novidades_Home(Post):
         self._categoria = categoria
 
 class Result(Post):
-    def __init__(self,titulo,desc,tags):
+    def __init__(self,titulo,desc):
         self._titulo = titulo
         self._desc = desc
-        self._tags = tags
     
 
 
@@ -75,8 +74,8 @@ Lista_Novidade_Home.append(Novidades_Home("Teste","random"))
 
 Last_search = []
 
-Search_Results = [Result("Teste","random",["a","b","aqua"])] # pegar cada valor do banco de dados e adicionar aqui ao fazer o procurar.
-
+# Search_Results = [Result("Teste","random",["a","b","aqua"])] # pegar cada valor do banco de dados e adicionar aqui ao fazer o procurar.
+Search_Results = [] 
 
 userPublicData = {'username':"Hugo"}
 
@@ -105,10 +104,24 @@ def resultados():
         _Search = Last_search[-1]
     return render_template("search/search.html",Search_Results = Search_Results,nmr_results = str(len(Search_Results)), userPublicData = userPublicData )
 
+
+
 @app.route('/procurar', methods=['POST',])
 def procurar():
     Last_search.append(request.form['SearchItem'])
+    Search = request.form['SearchItem']
+    Search_Results.clear()
+    if Search != "":
+        results = api.send_request(Search)
+    else:
+        results = api.send_request()
+    # {'id': 3, 'Titulo': 'Teste 04', 'Verificado': 0, 'Pais': 'chile', 'Estado': '', 'Cidade': '', 'Tipo_nave': 'aredodna', 'especie': '', 'descricao': 'bb', 'nome_contatado_testemunhas': '', 'verificado_por': '', 'observacoes': 'b'}
+    for result in results:
+        Search_Results.append(Result(result['Titulo'],result['descricao']))
     return redirect("/resultados")
+
+
+
 
 @app.route('/procurar_tag', methods=['POST',])
 def procurar_tag():
@@ -119,7 +132,7 @@ def procurar_tag():
 @app.route('/login')
 def login():
     return render_template("login/login.html", userPublicData = userPublicData)
-asd
+
 @app.route('/try_login',methods=['POST',])
 def try_login():
     for user in Users:
