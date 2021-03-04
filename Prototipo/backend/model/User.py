@@ -1,3 +1,6 @@
+users = []
+
+
 class User():
     def __init__(self,user_id,name,email,_password,_password_confirm = None,
     comment_permission = True ,report_permission = True, _post_permission = False):
@@ -16,3 +19,6 @@ class User():
 
     def compare_password(user_name):
         pass
+
+def create_User(name,email,password,password_confirm = None,comment_permission = True ,report_permission = True, _post_permission = False):
+    users.append(User(len(users),name,email,password,password_confirm))
