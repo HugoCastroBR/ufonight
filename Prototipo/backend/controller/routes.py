@@ -1,64 +1,30 @@
 from flask import Flask, render_template, request,redirect,session
-import api
+import sys
+import os
 
-app = Flask(__name__)
+template_dir = os.path.abspath('templates')
+print(template_dir)
+
+static_dir = os.path.abspath('static')
+print(static_dir)
+# sys.path.append('..\model')
+
+from connections import api
+from model import User,Post
+
+
+app = Flask(__name__,template_folder=template_dir,static_folder=static_dir)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 app.config.update(
     TESTING=True,
     SECRET_KEY= 'DevTest'
 )
 
-class Post:
-    def __init__(self,url = None,Post_id = None):
-        self._favorite = False  # altere
-        self._url = url
-        self._url = Post_id
-
-    def Toggle_favorite(self):
-        if self._favorite == False:
-            self._favorite = True
-        else:
-            self._favorite = False
-
-    def get_info(self, info):
-        return eval("self._" + info)
-    
-
-class Novidades_Home(Post):
-    def __init__(self,titulo,categoria):
-        self._titulo = titulo
-        self._categoria = categoria
-
-class Result(Post):
-    def __init__(self,titulo,desc):
-        self._titulo = titulo
-        self._desc = desc
-    
-
 
 
 Users = []
 
 
-
-class User():
-    def __init__(self,user_id,name,email,_password,_password_confirm = None,
-    comment_permission = True ,report_permission = True, _post_permission = False):
-        self.id = user_id
-        self.name = name
-        self.email = email
-        self._password = _password
-        self.comment_permission = comment_permission
-        self.report_permission = report_permission
-        self._post_permission = _post_permission
-
-    def set_password(user_name,new_password):
-        for User in Users:
-            if User.name == user_name:
-                User._password = new_password
-
-    def compare_password(user_name):
-        pass
 
     
 
@@ -70,7 +36,7 @@ def create_User(name,email,password,password_confirm = None,
 
 
 Lista_Novidade_Home = []
-Lista_Novidade_Home.append(Novidades_Home("Teste","random"))
+Lista_Novidade_Home.append(Post.Novidades_Home("Teste","random"))
 
 Last_search = []
 
@@ -91,10 +57,14 @@ def RefreshSession():
         session['User'] = ''
     userPublicData['username'] = session['User']
 
+
+
+
+
 @app.route('/')
 def inicio():
     RefreshSession()
-    return render_template("home/index.html",Lista_Novidade_Home = Lista_Novidade_Home, userPublicData = userPublicData)
+    return render_template("/home/index.html",Lista_Novidade_Home = Lista_Novidade_Home, userPublicData = userPublicData)
 
     
 @app.route('/resultados')
@@ -112,9 +82,9 @@ def procurar():
     Search = request.form['SearchItem']
     Search_Results.clear()
     if Search != "":
-        results = api.send_request(Search)
+        results = api.search(Search)
     else:
-        results = api.send_request()
+        results = api.search()
     # {'id': 3, 'Titulo': 'Teste 04', 'Verificado': 0, 'Pais': 'chile', 'Estado': '', 'Cidade': '', 'Tipo_nave': 'aredodna', 'especie': '', 'descricao': 'bb', 'nome_contatado_testemunhas': '', 'verificado_por': '', 'observacoes': 'b'}
     for result in results:
         Search_Results.append(Result(result['Titulo'],result['descricao']))
@@ -166,7 +136,5 @@ def register():
 def newpost():
     return render_template("post/post.html", userPublicData = userPublicData )
 
-
-# Fazer favoritar funcionar
-
-app.run(debug=True)
+def run():  
+    app.run(debug=True)

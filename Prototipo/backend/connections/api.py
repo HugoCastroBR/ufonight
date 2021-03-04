@@ -1,7 +1,8 @@
 import requests
 import json
 
-def send_request(strg = None):
+
+def search(strg = None):
     if strg == None:
         body = json.loads(requests.get('http://localhost:3000/casos').text)
     else:
