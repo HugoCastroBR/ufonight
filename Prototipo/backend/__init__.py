@@ -15,7 +15,4 @@ from controller import routes
 from view import view
 
 
-
-# Fazer favoritar funcionar
-
 routes.run()

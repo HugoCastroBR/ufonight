@@ -43,11 +43,12 @@
         <div class="UfoNight__Header__ContainerItem UfoNight__Header__UserMenuToggle__Container">
     
 
-            {%if userPublicData['username'] != ''%}
+            {%if userPublicData['username'] !=  ''%}
             <a class="UfoNight__Header__UserMenuToggle__UserName">{{userPublicData['username']}}</a>
             <button class="UfoNight__Header__UserMenuToggle__UserPic">
                 <img class="UfoNight__Header__UserMenuToggle__UserPicImg Invert" src="https://caocidadao.com.br/wp-content/uploads/2019/09/user.png" alt="">
             </button>
+            
             {%else%}
             <a class="UfoNight__Header__UserMenuToggle__UserName" href="/login">Login | Registrar</a>
             {%endif%}
