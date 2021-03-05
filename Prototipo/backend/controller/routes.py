@@ -4,7 +4,7 @@ import sys
 import os
 
 from connections import api
-from model import User,Post
+from model import User,Post, Search
 from view import view
 
 template_dir = os.path.abspath('templates')
@@ -43,7 +43,9 @@ def resultados():
 
 @app.route('/procurar', methods=['POST',])
 def procurar():
-    return view.procurar(Last_search,Search_Results)
+    global Search_Results
+    Search_Results = Search.procurar(Last_search,request.form['SearchItem'])
+    return view.procurar(Search_Results)
 
 
 @app.route('/login')

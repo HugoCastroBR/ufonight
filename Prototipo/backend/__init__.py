@@ -10,7 +10,7 @@ sys.path.append('/view')
 
 
 from connections import api
-from model import Post, User
+from model import Post, User, Search
 from controller import routes
 from view import view
 
