@@ -16,10 +16,10 @@ def inicio( userPublicData):
     RefreshSession(userPublicData)
     return render_template("/home/index.html", userPublicData = userPublicData)
 
-def resultados(Search_Results, nmr_results, userPublicData,Last_search):
+def resultados(Search_Results, nmr_results, userPublicData,Last_search,Search_word):
     if len(Last_search) > 0:
         _Search = Last_search[-1]
-    return render_template("search/search.html",Search_Results = Search_Results,nmr_results = str(len(Search_Results)), userPublicData = userPublicData )
+    return render_template("search/search.html",Search_Results = Search_Results,nmr_results = str(len(Search_Results)), userPublicData = userPublicData,Search_word = Search_word)
 
 
 def procurar(Results):

@@ -15,7 +15,7 @@
   display: none;
 }
 
-a, span {
+a, span, label {
   color: White;
 }
 
@@ -369,7 +369,7 @@ a, span {
           align-items: center;
 }
 
-.FilterBox_item h4 {
+.FilterBox_item h4, label {
   color: white;
   font-size: 11px;
 }

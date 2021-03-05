@@ -1,6 +1,6 @@
 @import "../style/base.scss";
 
-a,span{
+a,span,label{
     color: $secondColor;
 }
 
@@ -249,7 +249,7 @@ a,span{
     height: 20px;
     align-items: center;
 }
-.FilterBox_item h4{
+.FilterBox_item h4,label{
     color: white;
     font-size: 11px;
 }

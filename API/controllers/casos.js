@@ -1,4 +1,5 @@
 const Casos = require('../models/Casos.js')
+const cors = require('cors')
 
 
 
@@ -41,14 +42,15 @@ module.exports = app => {
 
 
     app.route('/search?:search')
-        .get((req,res) =>{  
+        .get(cors(),(req,res) =>{  
             const search = req.query.search
+            res.header("Access-Control-Allow-Origin", "*");
             Casos.precise_search(res,search)
         })
-        .post((req,res) =>{
+        .post(cors(),(req,res) =>{
             const search = req.query.search
             const filters = req.body
-            
+            res.header("Access-Control-Allow-Origin", "*");
             Casos.precise_search(res,search,filters)
         })
 

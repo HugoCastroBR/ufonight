@@ -37,7 +37,7 @@ class Casos{
 
     precise_search(res,search_for,filters = ''){
 
-
+        
         const sql = (`SELECT * FROM ufonight.casos WHERE LOWER ( REPLACE (Titulo,' ' ,'')) RLIKE LOWER ( REPLACE('${search_for}',' ','')) ${objToQuerry_str(filters)}`)
         console
         _query(sql,res)

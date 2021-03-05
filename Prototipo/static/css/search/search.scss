@@ -1,7 +1,12 @@
 @import "../style/base.scss";
 
-a,span{
+a,span,label{
     color: $secondColor;
+}
+
+.fetch_title_result_private{
+    display: none !important;
+    position: absolute;
 }
 
 .UfoNight__SearchResults{
@@ -142,7 +147,6 @@ a,span{
 }
 .UfoNight__Result__Tag{
     font-size: 13px;
-    margin-left: 2px;
 }
 
 .UfoNight__Result__FavoriteContainer{
@@ -250,7 +254,7 @@ a,span{
     height: 20px;
     align-items: center;
 }
-.FilterBox_item h4{
+.FilterBox_item h4,label{
     color: white;
     font-size: 11px;
 }
